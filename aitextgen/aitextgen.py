@@ -524,7 +524,7 @@ class aitextgen:
             accumulate_grad_batches=gradient_accumulation_steps,
             gpus=n_gpu,
             max_steps=num_steps,
-            show_progress_bar=True,
+            progress_bar_refresh_rate=1,
             gradient_clip_val=max_grad_norm if not fp16 else 0,
             checkpoint_callback=False,
             logger=loggers if loggers else False,

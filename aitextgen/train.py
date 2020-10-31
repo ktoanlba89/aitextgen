@@ -156,7 +156,7 @@ class ATGProgressBar(ProgressBarBase):
 
         if self.steps % self.progress_bar_refresh_rate == 0:
             if self.gpu:
-                desc += f" — GPU Mem: {get_gpu_memory_map()['gpu_0']} MB"
+                desc += f" — GPU Mem: {get_gpu_memory_map()['gpu_id: 0/memory.used (MB)']} MB"
             self.main_progress_bar.update(self.progress_bar_refresh_rate)
             self.main_progress_bar.set_description(desc)
 
